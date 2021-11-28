@@ -1,4 +1,4 @@
-# Storybook Addon Kit
+# Theme Switcher Addon
 
 Simplify the creation of Storybook addons
 
