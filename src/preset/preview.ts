@@ -12,3 +12,10 @@ import { withGlobals } from "../withGlobals";
 import { withRoundTrip } from "../withRoundTrip";
 
 export const decorators = [withGlobals, withRoundTrip];
+
+export const parameters = {
+  theme: {
+    selector: "body",
+    dataAttr: "data-theme",
+  },
+};

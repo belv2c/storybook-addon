@@ -1,7 +1,7 @@
 {
-  "name": "storybook-addon-kit",
+  "name": "theme-switcher-addon",
   "version": "0.0.0",
-  "description": "everything you need to build a Storybook addon",
+  "description": "Storybook addon to switch themes",
   "keywords": [
     "storybook-addons",
     "style",
@@ -9,9 +9,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/storybookjs/storybook-addon-kit"
+    "url": "https://github.com/belv2c/storybook-addon"
   },
-  "author": "winkerVSbecks",
+  "author": "Brooke Weathers",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -81,7 +81,7 @@
     "access": "public"
   },
   "storybook": {
-    "displayName": "Addon Kit",
+    "displayName": "Theme Switcher Addon",
     "supportedFrameworks": [
       "react",
       "vue",

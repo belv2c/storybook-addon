@@ -1,8 +1,7 @@
-import { StoryFn as StoryFunction, StoryContext } from "@storybook/addons";
-import { useEffect, useGlobals } from "@storybook/addons";
+import { StoryContext, StoryFn as StoryFunction, useEffect, useGlobals } from "@storybook/addons";
 
 export const withGlobals = (StoryFn: StoryFunction, context: StoryContext) => {
-  const [{ myAddon }] = useGlobals();
+  const [{ outlineActive }, updateGlobals] = useGlobals();
   // Is the addon being used in the docs panel
   const isInDocs = context.viewMode === "docs";
 
@@ -13,11 +12,8 @@ export const withGlobals = (StoryFn: StoryFunction, context: StoryContext) => {
       ? `#anchor--${context.id} .docs-story`
       : `#root`;
 
-    displayToolState(selectorId, {
-      myAddon,
-      isInDocs,
-    });
-  }, [myAddon]);
+      displayToolState(selectorId, { outlineActive, isInDocs });
+  }, [outlineActive]);
 
   return StoryFn();
 };

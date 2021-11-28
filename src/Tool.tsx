@@ -1,25 +1,25 @@
-import React, { useCallback } from "react";
 import { useGlobals } from "@storybook/api";
-import { Icons, IconButton } from "@storybook/components";
+import { IconButton, Icons } from "@storybook/components";
+import React, { useCallback } from "react";
 import { TOOL_ID } from "./constants";
 
 export const Tool = () => {
-  const [{ myAddon }, updateGlobals] = useGlobals();
+ const [{ outlineActive }, updateGlobals] = useGlobals();
 
-  const toggleMyTool = useCallback(
+  const toggleOutline = useCallback(
     () =>
       updateGlobals({
-        myAddon: myAddon ? undefined : true,
+        outlineActive: !outlineActive
       }),
-    [myAddon]
+    [outlineActive]
   );
 
   return (
     <IconButton
       key={TOOL_ID}
-      active={myAddon}
+      active={outlineActive}
       title="Enable my addon"
-      onClick={toggleMyTool}
+      onClick={toggleOutline}
     >
       {/*
         Checkout https://next--storybookjs.netlify.app/official-storybook/?path=/story/basics-icon--labels
