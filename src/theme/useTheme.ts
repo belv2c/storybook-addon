@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { STORYBOOK_IFRAME_ID } from "../constants";
 import { Theme } from "./types";
 
@@ -9,15 +8,13 @@ const getIframe = (selector: any): HTMLElement => {
   return iframe.contentDocument.querySelector(selector);
 };
 
-export const useTheme = (theme: Theme) => {
-  const [isWaitr, setIsWaitr] = useState(false);
-
+export const useTheme = (theme: Theme, selectedTheme: string) => {
+  
   const toggleMode = () => {
-    console.log(theme)
+    console.log("selectedTheme", selectedTheme)
     const iframe = getIframe(theme.selector);
-    iframe.setAttribute(theme.dataAttr, isWaitr ? "waitr-theme" : "fetch-theme");
-    setIsWaitr((prev) => !prev);
+    iframe.setAttribute(theme.dataAttr, selectedTheme);
   };
 
-  return { isWaitr, toggleMode };
+  return toggleMode;
 };
