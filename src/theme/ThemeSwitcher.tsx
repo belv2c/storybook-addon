@@ -26,9 +26,9 @@ export const ThemeSwitcher = () => {
 
   return (
     <StyledSelect id={controlId} onChange={handleChange}>
-        {Object.values(themeOptions).map((option) => (
-          <option key={option}>{option}</option>
-        ))}
-      </StyledSelect>
+      {Object.values(themeOptions).map((option) => (
+        <option key={option}>{option}</option>
+      ))}
+    </StyledSelect>
   );
 };

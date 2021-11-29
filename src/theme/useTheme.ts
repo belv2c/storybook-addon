@@ -11,7 +11,6 @@ const getIframe = (selector: any): HTMLElement => {
 export const useTheme = (theme: Theme, selectedTheme: string) => {
   
   const toggleMode = () => {
-    console.log("selectedTheme", selectedTheme)
     const iframe = getIframe(theme.selector);
     iframe.setAttribute(theme.dataAttr, selectedTheme);
   };
