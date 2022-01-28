@@ -1,6 +1,6 @@
 {
   "name": "theme-switcher-addon",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Storybook addon to switch themes",
   "keywords": [
     "storybook-addons",

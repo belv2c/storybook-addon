@@ -11,7 +11,7 @@ const StyledSelect = styled.select`
   padding: .125em .5em;
 `;
 
-const themeOptions = ['fetch-theme', 'waitr-theme', 'dd-theme', 'bs-theme'];
+const themeOptions = ['dd-theme', 'waitr-theme', 'bsq-theme', 'fetch-theme'];
 
 const getControlId = (value: string) => `control-${value.replace(/\s+/g, '-')}`;
 
